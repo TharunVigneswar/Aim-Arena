@@ -9,7 +9,15 @@ Go to [AIM ARENA](https://tharunvigneswar.itch.io/aim-arena) website to download
 **Method 2:**
 Go to the releases page of this github repo to find a zip file containing the .exe file required to run this game.
 
-NOTE: If you want to use the scripts and scenes used to make this game, go to the releases page and download the resources.zip file. Then extract the file to get all the resources used. Next open the latest version of Godot, 4.7.2, and import the extracted folder. Or else you can also download the attached resources.zip file, extract it and import it in Godot 4.7.2 to view the project.
+# How to import game code:
+
+1. Download the resources.zip file in this github repo
+2. Extract the downloaded .zip file and save it in a folder.
+3. Now if you dont have Godot 4.7.2 installed, install it from here[https://godotengine.org/download/archive/4.7.2-stable/]
+4. Now press the import button in Godot projects menu
+5. Now find the folder you exported the downloaded zip file to
+6. press the project.godot file and import it to godot.
+7. Then wait few seconds for it to import and you can access the game files.
 
 # How to play:
 1. Once you install the game it will show a start screen, press start.
