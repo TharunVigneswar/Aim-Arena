@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://70u4518cmpr4"]
+
+[ext_resource type="Script" uid="uid://b61k8uesimr38" path="res://scripts/duration_selection.gd" id="1_6g7fg"]
+
+[node name="DurationSelection" type="Control" unique_id=752745241]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6g7fg")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1057303193]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.03137255, 0.043137256, 0.07058824, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="Background" unique_id=747031321]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuLayout" type="VBoxContainer" parent="Background/CenterContainer" unique_id=592696848]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Title" type="Label" parent="Background/CenterContainer/MenuLayout" unique_id=1344590230]
+custom_minimum_size = Vector2(500, 55)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "SELECT SESSION DURATION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DurationButtons" type="HBoxContainer" parent="Background/CenterContainer/MenuLayout" unique_id=1627403750]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="30SecondsButton" type="Button" parent="Background/CenterContainer/MenuLayout/DurationButtons" unique_id=1972948758]
+custom_minimum_size = Vector2(130, 55)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "30 SECONDS"
+
+[node name="60SecondsButton" type="Button" parent="Background/CenterContainer/MenuLayout/DurationButtons" unique_id=1032703874]
+custom_minimum_size = Vector2(130, 55)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "60 SECONDS"
+
+[node name="90SecondsButton" type="Button" parent="Background/CenterContainer/MenuLayout/DurationButtons" unique_id=703149842]
+custom_minimum_size = Vector2(130, 55)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "90 SECONDS"
+
+[node name="StartButton" type="Button" parent="Background/CenterContainer/MenuLayout" unique_id=1512047484]
+custom_minimum_size = Vector2(220, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "START TRAINING"
+
+[node name="BackButton" type="Button" parent="Background/CenterContainer/MenuLayout" unique_id=1468410680]
+custom_minimum_size = Vector2(150, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "BACK"

@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://cadqtnwkumai6"]
+
+[ext_resource type="PackedScene" uid="uid://oao4x6t73oc4" path="res://scenes/training_arena.tscn" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://cyot5lb5d1xha" path="res://scripts/main.gd" id="1_85g3d"]
+[ext_resource type="PackedScene" uid="uid://bka8fr3ty42pm" path="res://scenes/player.tscn" id="2_sugp2"]
+[ext_resource type="Script" uid="uid://dx1b3xcovkouk" path="res://scripts/hud.gd" id="3_o6xl0"]
+[ext_resource type="Script" uid="uid://basnmvwu7g4wc" path="res://scripts/crosshair.gd" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://cw7meowxw5ave" path="res://scripts/target_spawner.gd" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://b1f3pq082j8w6" path="res://scripts/hit_marker.gd" id="4_tefeu"]
+[ext_resource type="PackedScene" uid="uid://c88xgfih5qjnr" path="res://scenes/target.tscn" id="5_tbgi4"]
+[ext_resource type="Script" uid="uid://btmejyw5q5lmp" path="res://scripts/session_timer.gd" id="6_tipki"]
+
+[node name="Main" type="Node3D" unique_id=1466387635]
+script = ExtResource("1_85g3d")
+
+[node name="TrainingArena" parent="." unique_id=21164935 instance=ExtResource("1_0wfyh")]
+
+[node name="Player" parent="." unique_id=889060350 instance=ExtResource("2_sugp2")]
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1924328197]
+
+[node name="Crosshair" type="Control" parent="HUD" unique_id=582282146]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_sugp2")
+
+[node name="HitMarker" type="Control" parent="HUD" unique_id=1533310620]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_tefeu")
+
+[node name="StatsPanel" type="Control" parent="HUD" unique_id=895650876]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 25.0
+offset_top = 25.0
+script = ExtResource("3_o6xl0")
+
+[node name="ScoreLabel" type="Label" parent="HUD/StatsPanel" unique_id=701078731]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.91764706, 0.9843137, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "SCORE     0"
+
+[node name="ShotsLabel" type="Label" parent="HUD/StatsPanel" unique_id=101591853]
+layout_mode = 0
+offset_top = 35.0
+offset_right = 102.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.91764706, 0.9843137, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "SHOTS     0"
+
+[node name="HitsLabel" type="Label" parent="HUD/StatsPanel" unique_id=673622924]
+layout_mode = 0
+offset_top = 70.0
+offset_right = 92.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0.91764706, 0.9843137, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "HITS       0"
+
+[node name="AccuracyLabel" type="Label" parent="HUD/StatsPanel" unique_id=1834524231]
+layout_mode = 0
+offset_top = 105.0
+offset_right = 149.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(0.91764706, 0.9843137, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "ACCURACY   0%"
+
+[node name="MissesLabel" type="Label" parent="HUD/StatsPanel" unique_id=56888143]
+layout_mode = 0
+offset_top = 140.0
+offset_right = 90.0
+offset_bottom = 163.0
+theme_override_colors/font_color = Color(0.91764706, 0.9843137, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "MISSES      0"
+
+[node name="SessionTimer" type="Node" parent="HUD" unique_id=682499637]
+script = ExtResource("6_tipki")
+
+[node name="TimerLabel" type="Label" parent="HUD/SessionTimer" unique_id=2140141189]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 25.0
+offset_right = 100.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.8980392, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "01:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TargetSpawner" type="Node3D" parent="." unique_id=1577479268]
+script = ExtResource("4_jyhfs")
+target_scene = ExtResource("5_tbgi4")

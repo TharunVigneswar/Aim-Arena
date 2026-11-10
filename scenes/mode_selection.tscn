@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://be1gsuby6af3p"]
+
+[ext_resource type="Script" uid="uid://brgj4i3dt5yb1" path="res://scripts/mode_selection.gd" id="1_jv0sf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htamx"]
+bg_color = Color(0.07058824, 0.09803922, 0.14509805, 1)
+border_color = Color(0.14901961, 0.20392157, 0.2784314, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+corner_detail = 12
+
+[node name="ModeSelection" type="Control" unique_id=1626747381]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jv0sf")
+
+[node name="Background" type="ColorRect" parent="." unique_id=160834945]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.03137255, 0.043137256, 0.07058824, 1)
+
+[node name="MainLayout" type="VBoxContainer" parent="Background" unique_id=1906312018]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="Header" type="VBoxContainer" parent="Background/MainLayout" unique_id=1738589701]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Title" type="Label" parent="Background/MainLayout/Header" unique_id=1971922629]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "SELECT TRAINING MODE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Background/MainLayout/Header" unique_id=1592214461]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5372549, 0.5882353, 0.65882355, 1)
+theme_override_font_sizes/font_size = 13
+text = "CHOOSE YOUR TRAINING EXPERIENCE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ModeCards" type="HBoxContainer" parent="Background/MainLayout" unique_id=591945613]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="ClassicCard" type="PanelContainer" parent="Background/MainLayout/ModeCards" unique_id=1566634522]
+custom_minimum_size = Vector2(280, 300)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_htamx")
+
+[node name="CardLayout" type="VBoxContainer" parent="Background/MainLayout/ModeCards/ClassicCard" unique_id=1789545550]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="ClassicIcon" type="Label" parent="Background/MainLayout/ModeCards/ClassicCard/CardLayout" unique_id=236646826]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "◎"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClassicTitle" type="Label" parent="Background/MainLayout/ModeCards/ClassicCard/CardLayout" unique_id=1729981429]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "CLASSIC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClassicDescription" type="Label" parent="Background/MainLayout/ModeCards/ClassicCard/CardLayout" unique_id=542894726]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6039216, 0.65882355, 0.72156864, 1)
+theme_override_font_sizes/font_size = 13
+text = "Balanced training experience"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClassicButton" type="Button" parent="Background/MainLayout/ModeCards/ClassicCard/CardLayout" unique_id=2074660531]
+custom_minimum_size = Vector2(180, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "SELECT MODE"
+
+[node name="PrecisionCard" type="PanelContainer" parent="Background/MainLayout/ModeCards" unique_id=729906943]
+custom_minimum_size = Vector2(280, 300)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_htamx")
+
+[node name="CardLayout" type="VBoxContainer" parent="Background/MainLayout/ModeCards/PrecisionCard" unique_id=764907433]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="PrecisionIcon" type="Label" parent="Background/MainLayout/ModeCards/PrecisionCard/CardLayout" unique_id=1801413326]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "✧"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PrecisionTitle" type="Label" parent="Background/MainLayout/ModeCards/PrecisionCard/CardLayout" unique_id=1456863104]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "PRECISION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PrecisionDescription" type="Label" parent="Background/MainLayout/ModeCards/PrecisionCard/CardLayout" unique_id=477444993]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6039216, 0.65882355, 0.72156864, 1)
+theme_override_font_sizes/font_size = 13
+text = "Focus on accuracy and control"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PrecisionButton" type="Button" parent="Background/MainLayout/ModeCards/PrecisionCard/CardLayout" unique_id=1395315140]
+custom_minimum_size = Vector2(180, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "SELECT MODE"
+
+[node name="SpeedCard" type="PanelContainer" parent="Background/MainLayout/ModeCards" unique_id=707562953]
+custom_minimum_size = Vector2(280, 300)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_htamx")
+
+[node name="CardLayout" type="VBoxContainer" parent="Background/MainLayout/ModeCards/SpeedCard" unique_id=238138863]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="SpeedIcon" type="Label" parent="Background/MainLayout/ModeCards/SpeedCard/CardLayout" unique_id=1781763486]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "⚡"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpeedTitle" type="Label" parent="Background/MainLayout/ModeCards/SpeedCard/CardLayout" unique_id=586962083]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "SPEED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpeedDescription" type="Label" parent="Background/MainLayout/ModeCards/SpeedCard/CardLayout" unique_id=1932271471]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6039216, 0.65882355, 0.72156864, 1)
+theme_override_font_sizes/font_size = 13
+text = "Reaction speed test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpeedButton" type="Button" parent="Background/MainLayout/ModeCards/SpeedCard/CardLayout" unique_id=813716681]
+custom_minimum_size = Vector2(180, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "SELECT MODE"
+
+[node name="Footer" type="HBoxContainer" parent="Background/MainLayout" unique_id=1359171804]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="BackButton" type="Button" parent="Background/MainLayout/Footer" unique_id=1084694686]
+custom_minimum_size = Vector2(150, 45)
+layout_mode = 2
+text = "BACK"
+
+[node name="ContinueButton" type="Button" parent="Background/MainLayout/Footer" unique_id=1913286408]
+custom_minimum_size = Vector2(200, 45)
+layout_mode = 2
+text = "CONTINUE"

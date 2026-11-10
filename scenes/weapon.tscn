@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://brvsj3qerglbo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6nu22"]
+albedo_color = Color(0.14509805, 0.1764706, 0.21960784, 1)
+metallic = 0.8
+roughness = 0.3
+
+[sub_resource type="BoxMesh" id="BoxMesh_d1gwf"]
+size = Vector3(0.28, 0.22, 0.65)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xasec"]
+albedo_color = Color(0.06666667, 0.09019608, 0.1254902, 1)
+metallic = 0.85
+roughness = 0.25
+
+[sub_resource type="BoxMesh" id="BoxMesh_tb2c2"]
+size = Vector3(0.13, 0.12, 0.38)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n5n3o"]
+size = Vector3(0.18, 0.38, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xq4fs"]
+size = Vector3(0.18, 0.045, 0.35)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bmw2d"]
+albedo_color = Color(0, 0.8980392, 1, 1)
+metallic = 0.2
+roughness = 0.25
+emission_enabled = true
+emission = Color(0, 0.8117647, 1, 1)
+emission_energy_multiplier = 2.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_8xmfv"]
+size = Vector3(0.025, 0.035, 0.32)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uxn4k"]
+albedo_color = Color(0.06666667, 0.09019608, 0.1254902, 1)
+metallic = 0.85
+roughness = 0.25
+
+[sub_resource type="BoxMesh" id="BoxMesh_p47a1"]
+size = Vector3(0.15, 0.14, 0.08)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tb2c2"]
+albedo_color = Color(0, 0.8980392, 1, 1)
+emission_enabled = true
+emission = Color(0, 0.8980392, 1, 1)
+emission_energy_multiplier = 5.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_d1gwf"]
+radius = 0.12
+height = 0.24
+
+[node name="Weapon" type="Node3D" unique_id=438583779]
+
+[node name="Body" type="MeshInstance3D" parent="." unique_id=805717334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.35)
+material_override = SubResource("StandardMaterial3D_6nu22")
+mesh = SubResource("BoxMesh_d1gwf")
+
+[node name="Barrel" type="MeshInstance3D" parent="." unique_id=1780850586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, -0.8)
+material_override = SubResource("StandardMaterial3D_xasec")
+mesh = SubResource("BoxMesh_tb2c2")
+
+[node name="Grip" type="MeshInstance3D" parent="." unique_id=1963084099]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, -0.27, -0.19)
+material_override = SubResource("StandardMaterial3D_xasec")
+mesh = SubResource("BoxMesh_n5n3o")
+
+[node name="TopRail" type="MeshInstance3D" parent="." unique_id=150111145]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.135, -0.38)
+material_override = SubResource("StandardMaterial3D_xasec")
+mesh = SubResource("BoxMesh_xq4fs")
+
+[node name="RightEnergyStrip" type="MeshInstance3D" parent="." unique_id=1948095086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.035, -0.39)
+material_override = SubResource("StandardMaterial3D_bmw2d")
+mesh = SubResource("BoxMesh_8xmfv")
+
+[node name="LeftEnergyStrip" type="MeshInstance3D" parent="." unique_id=2036739748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.035, -0.39)
+material_override = SubResource("StandardMaterial3D_bmw2d")
+mesh = SubResource("BoxMesh_8xmfv")
+
+[node name="Muzzle" type="MeshInstance3D" parent="." unique_id=1634181511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, -1.01)
+material_override = SubResource("StandardMaterial3D_uxn4k")
+mesh = SubResource("BoxMesh_p47a1")
+
+[node name="MuzzleFlash" type="MeshInstance3D" parent="." unique_id=1176076010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, -1.2)
+visible = false
+material_override = SubResource("StandardMaterial3D_tb2c2")
+mesh = SubResource("SphereMesh_d1gwf")

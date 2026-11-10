@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://b188t1w2ed18u"]
+
+[ext_resource type="Script" uid="uid://ddjgq78v0gftl" path="res://scripts/results.gd" id="1_qh7lt"]
+
+[node name="Results" type="Control" unique_id=1207061839]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qh7lt")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1399765059]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03137255, 0.050980393, 0.08627451, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=905699361]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultsLayout" type="VBoxContainer" parent="CenterContainer" unique_id=1338409230]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/ResultsLayout" unique_id=657354490]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.9647059)
+theme_override_font_sizes/font_size = 32
+text = "TRAINING COMPLETE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ModeLabel" type="Label" parent="CenterContainer/ResultsLayout" unique_id=464946781]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.8980392, 1, 1)
+text = "SPEED MODE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="CenterContainer/ResultsLayout" unique_id=1957489579]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "SCORE: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AccuracyLabel" type="Label" parent="CenterContainer/ResultsLayout" unique_id=871568418]
+layout_mode = 2
+text = "ACCURACY: 0%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HitsLabel" type="Label" parent="CenterContainer/ResultsLayout" unique_id=1042446670]
+layout_mode = 2
+text = "TARGETS HIT: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MissesLabel" type="Label" parent="CenterContainer/ResultsLayout" unique_id=479896079]
+layout_mode = 2
+text = "MISSES: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShotsLabel" type="Label" parent="CenterContainer/ResultsLayout" unique_id=25848487]
+layout_mode = 2
+text = "SHOTS FIRED: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BestReactionLabel" type="Label" parent="CenterContainer/ResultsLayout" unique_id=350290586]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5372549, 0.5882353, 0.65882355, 1)
+theme_override_font_sizes/font_size = 14
+text = "BEST REACTION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayAgainButton" type="Button" parent="CenterContainer/ResultsLayout" unique_id=1620336924]
+custom_minimum_size = Vector2(300, 65)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "PLAY AGAIN"
+
+[node name="MainMenuButton" type="Button" parent="CenterContainer/ResultsLayout" unique_id=951826337]
+custom_minimum_size = Vector2(300, 65)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "MAIN MENU"

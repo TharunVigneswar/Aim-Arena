@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://cbwr0die08r3c"]
+
+[ext_resource type="Script" uid="uid://c6dxw8q8ikk8t" path="res://scripts/settings.gd" id="1_5p8wc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1gwf"]
+bg_color = Color(0.07058824, 0.09803922, 0.14509805, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.14901961, 0.20392157, 0.2784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n5n3o"]
+bg_color = Color(0, 0.8980392, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.8980392, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tb2c2"]
+bg_color = Color(0.09411765, 0.16470589, 0.21960784, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.8980392, 1, 1)
+
+[node name="Settings" type="Control" unique_id=1791525727]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5p8wc")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1873706565]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.03137255, 0.050980393, 0.08627451, 1)
+
+[node name="MainLayout" type="VBoxContainer" parent="Background" unique_id=1029304876]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 45.0
+offset_right = -100.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="Header" type="VBoxContainer" parent="Background/MainLayout" unique_id=917535319]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Title" type="Label" parent="Background/MainLayout/Header" unique_id=1638506129]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.8980392, 1, 1)
+theme_override_font_sizes/font_size = 36
+text = "SYSTEM SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Background/MainLayout/Header" unique_id=1697509508]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5176471, 0.5764706, 0.65882355, 1)
+text = "CONFIGURE YOUR AUDIO EXPERIENCE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsContainer" type="VBoxContainer" parent="Background/MainLayout" unique_id=1067115735]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="AudioSection" type="VBoxContainer" parent="Background/MainLayout/SettingsContainer" unique_id=1783669335]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="AudioTitle" type="Label" parent="Background/MainLayout/SettingsContainer/AudioSection" unique_id=914195999]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.8980392, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "AUDIO"
+vertical_alignment = 1
+
+[node name="MasterVolumeRow" type="HBoxContainer" parent="Background/MainLayout/SettingsContainer/AudioSection" unique_id=294654005]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="MasterVolumeLabel" type="Label" parent="Background/MainLayout/SettingsContainer/AudioSection/MasterVolumeRow" unique_id=1030008060]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8627451, 0.9019608, 0.9490196, 1)
+theme_override_font_sizes/font_size = 14
+text = "MASTER VOLUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterVolumeSlider" type="HSlider" parent="Background/MainLayout/SettingsContainer/AudioSection/MasterVolumeRow" unique_id=362101749]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+value = 75.0
+
+[node name="MusicVolumeRow" type="HBoxContainer" parent="Background/MainLayout/SettingsContainer/AudioSection" unique_id=1597429301]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="MusicVolumeLabel" type="Label" parent="Background/MainLayout/SettingsContainer/AudioSection/MusicVolumeRow" unique_id=1227545018]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8627451, 0.9019608, 0.9490196, 1)
+theme_override_font_sizes/font_size = 14
+text = "MUSIC VOLUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumeSlider" type="HSlider" parent="Background/MainLayout/SettingsContainer/AudioSection/MusicVolumeRow" unique_id=503117480]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+value = 60.0
+
+[node name="SFXVolumeRow" type="HBoxContainer" parent="Background/MainLayout/SettingsContainer/AudioSection" unique_id=2112199522]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="SFXVolumeLabel" type="Label" parent="Background/MainLayout/SettingsContainer/AudioSection/SFXVolumeRow" unique_id=1272739091]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8627451, 0.9019608, 0.9490196, 1)
+theme_override_font_sizes/font_size = 14
+text = "SFX VOLUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXVolumeSlider" type="HSlider" parent="Background/MainLayout/SettingsContainer/AudioSection/SFXVolumeRow" unique_id=451336115]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+value = 80.0
+
+[node name="Footer" type="VBoxContainer" parent="Background/MainLayout" unique_id=1274840117]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="Background/MainLayout/Footer" unique_id=238771576]
+custom_minimum_size = Vector2(180, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_d1gwf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n5n3o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tb2c2")
+text = "BACK"

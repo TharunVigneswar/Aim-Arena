@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bka8fr3ty42pm"]
+
+[ext_resource type="Script" uid="uid://d01a0ypd8m7h8" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://brvsj3qerglbo" path="res://scenes/weapon.tscn" id="2_g2els"]
+[ext_resource type="Script" uid="uid://brlmivq0o85nt" path="res://scripts/shooting.gd" id="2_qhqgy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d1gwf"]
+radius = 0.35
+height = 1.8
+
+[node name="Player" type="CharacterBody3D" unique_id=889060350]
+script = ExtResource("1_3vyb7")
+
+[node name="CollisionShape" type="CollisionShape3D" parent="." unique_id=2133850129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_d1gwf")
+
+[node name="Head" type="Node3D" parent="." unique_id=401110126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=190315609]
+current = true
+fov = 90.0
+script = ExtResource("2_qhqgy")
+
+[node name="Weapon" parent="Head/Camera3D" unique_id=438583779 instance=ExtResource("2_g2els")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32, -0.25, -0.55)
+
+[node name="AimRay" type="RayCast3D" parent="Head/Camera3D" unique_id=1046887808]
+target_position = Vector3(0, 0, -100)

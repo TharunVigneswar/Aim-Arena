@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cyy3dydtx505r"]
+
+[ext_resource type="Script" uid="uid://6gm7s80unjex" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
+[node name="MainMenu" type="Control" unique_id=786613967]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1774903050]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03137255, 0.050980393, 0.08627451, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="Background" unique_id=2028152731]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuLayout" type="VBoxContainer" parent="Background/CenterContainer" unique_id=1968344920]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="Background/CenterContainer/MenuLayout" unique_id=620425337]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.8980392, 1, 1)
+theme_override_font_sizes/font_size = 72
+text = "AIM TRAINER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="Background/CenterContainer/MenuLayout" unique_id=129901836]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.54509807, 0.60784316, 0.6784314, 1)
+theme_override_font_sizes/font_size = 18
+text = "PRECISION TRAINING SYSTEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Space" type="VBoxContainer" parent="Background/CenterContainer/MenuLayout" unique_id=1373927373]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="StartButton" type="Button" parent="Background/CenterContainer/MenuLayout" unique_id=1717131205]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "START GAME"
+
+[node name="SettingsButton" type="Button" parent="Background/CenterContainer/MenuLayout" unique_id=1125289093]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "SETTINGS"
