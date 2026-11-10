@@ -11,13 +11,10 @@ Go to the releases page of this github repo to find a zip file containing the .e
 
 # How to import game code:
 
-1. Download the resources.zip file in this github repo
-2. Extract the downloaded .zip file and save it in a folder.
-3. Now if you dont have Godot 4.7.2 installed, install it from here[https://godotengine.org/download/archive/4.7.2-stable/]
-4. Now press the import button in Godot projects menu
-5. Now find the folder you exported the downloaded zip file to
-6. press the project.godot file and import it to godot.
-7. Then wait few seconds for it to import and you can access the game files.
+1. Download Godot (https://godotengine.org/download/windows/)
+2. Clone the repo using git clone https://github.com/TharunVigneswar/Aim-Arena.git
+3. Open Godot -> Project manager -> Import -> select the project.godot file in the repo folder
+4. Press F5 or the play button to run.
 
 # How to play:
 1. Once you install the game it will show a start screen, press start.
